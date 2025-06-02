@@ -1,14 +1,12 @@
 package com.microservice.UserService.controller;
 
 import com.microservice.UserService.model.User;
-import com.microservice.UserService.service.NativeQueriesService;
 import com.microservice.UserService.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -17,8 +15,6 @@ public class UserController {
     @Autowired
     private UserServiceImpl userService;
 
-    @Autowired
-    private NativeQueriesService nativeQueriesService;
     @PostMapping("/createUser")
     public ResponseEntity<?> createUser(@RequestBody User user) {
         userService.createUser(user);
