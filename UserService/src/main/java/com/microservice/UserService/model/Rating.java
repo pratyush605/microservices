@@ -6,6 +6,7 @@ public class Rating {
     private Long hotelId;
     private int rating;
     private String remark;
+    private Hotel hotel;
 
     public Long getId() {
       return this.id;
@@ -40,5 +41,24 @@ public class Rating {
     }
     public void setRemark(String value) {
       this.remark = value;
+    }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public Rating() {
+    }
+
+    public Rating(Long id, Long userId, Long hotelId, int rating, String remark, Hotel hotel) {
+        this.id = id;
+        this.userId = userId;
+        this.hotelId = hotelId;
+        this.rating = rating;
+        this.remark = remark;
+        this.hotel = hotel;
     }
 }
