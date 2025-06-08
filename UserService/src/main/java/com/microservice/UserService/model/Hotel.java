@@ -1,7 +1,5 @@
 package com.microservice.UserService.model;
 
-import jakarta.persistence.Column;
-
 public class Hotel {
     private Long id;
     private String name;
