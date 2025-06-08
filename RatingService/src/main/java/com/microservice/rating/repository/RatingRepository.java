@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.microservice.rating.model.Rating;
 
 @Repository
-public interface RatingRepository extends MongoRepository<Rating, Long>{
+public interface RatingRepository extends MongoRepository<Rating, String>{
 
     List<Rating> findByUserId(Long userId);
 

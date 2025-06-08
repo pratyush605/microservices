@@ -13,9 +13,9 @@ public interface RatingService {
 
     public List<Rating> getAllRatingByHotelId(Long hotelId);
 
-    public Rating getRatingById(Long id);
+    public Rating getRatingById(String id);
 
-    public Rating updateRating(Rating rating, Long id);
+    public Rating updateRating(Rating rating, String id);
 
-    public void deleteRating(Long id);
+    public void deleteRating(String id);
 }

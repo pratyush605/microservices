@@ -47,19 +47,19 @@ public class RatingController {
     }
 
     @GetMapping("/getRatingById/{id}")
-    public ResponseEntity<?> getRatingById(@PathVariable("id") Long id){
+    public ResponseEntity<?> getRatingById(@PathVariable("id") String id){
         Rating rating = ratingService.getRatingById(id);
         return ResponseEntity.ok(rating);
     }
 
     @PostMapping("/updateRating/{id}")
-    public ResponseEntity<?> updateRating(@RequestBody Rating rating, @PathVariable("id") Long id) {
+    public ResponseEntity<?> updateRating(@RequestBody Rating rating, @PathVariable("id") String id) {
         Rating newRating = ratingService.updateRating(rating, id);
         return ResponseEntity.ok(newRating);
     }
 
     @GetMapping("/deleteRating/{id}")
-    public ResponseEntity<?> deleteRating(@PathVariable("id") Long id){
+    public ResponseEntity<?> deleteRating(@PathVariable("id") String id){
         ratingService.deleteRating(id);
         return ResponseEntity.ok("Rating deleted successfully!!");
     }

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("user_ratings")
 public class Rating {
     @Id
-    private Long id;
+    private String id;
 
     private Long userId;
 
@@ -16,10 +16,10 @@ public class Rating {
 
     private String remark;
 
-    public Long getId() {
+    public String getId() {
       return this.id;
     }
-    public void setId(Long id) {
+    public void setId(String id) {
       this.id = id;
     }
 

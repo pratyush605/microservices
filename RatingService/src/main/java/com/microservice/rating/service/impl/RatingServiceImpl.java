@@ -36,12 +36,12 @@ public class RatingServiceImpl implements RatingService{
     }
 
     @Override
-    public Rating getRatingById(Long id){
+    public Rating getRatingById(String id){
         return ratingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Rating with given id not found."));
     }
 
     @Override
-    public Rating updateRating(Rating rating, Long id){
+    public Rating updateRating(Rating rating, String id){
         Rating oldRating = ratingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Rating with given id not found."));
         oldRating.setHotelId(rating.getHotelId());
         oldRating.setRating(rating.getRating());
@@ -51,7 +51,7 @@ public class RatingServiceImpl implements RatingService{
     }
 
     @Override
-    public void deleteRating(Long id){
+    public void deleteRating(String id){
         ratingRepository.deleteById(id);
     }
 }

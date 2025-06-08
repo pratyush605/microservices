@@ -1,17 +1,17 @@
 package com.microservice.UserService.model;
 
 public class Rating {
-    private Long id;
+    private String id;
     private Long userId;
     private Long hotelId;
     private int rating;
     private String remark;
     private Hotel hotel;
 
-    public Long getId() {
+    public String getId() {
       return this.id;
     }
-    public void setId(Long value) {
+    public void setId(String value) {
       this.id = value;
     }
 
@@ -53,7 +53,7 @@ public class Rating {
     public Rating() {
     }
 
-    public Rating(Long id, Long userId, Long hotelId, int rating, String remark, Hotel hotel) {
+    public Rating(String id, Long userId, Long hotelId, int rating, String remark, Hotel hotel) {
         this.id = id;
         this.userId = userId;
         this.hotelId = hotelId;
